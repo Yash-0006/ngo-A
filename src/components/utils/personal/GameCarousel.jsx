@@ -11,157 +11,169 @@ import BackgroundLines from "@/components/utils/background/background-lines"; //
 const games = [
   {
     title: "Care Meal",
-    image: "/maingallery/a.JPG",
+    image: "/main gallery/a.JPG",
     description: "Serving smiles and lunch at Nayasawera NGO, Jaipur.",
   },
   {
     title: "Elder Aid",
-    image: "/maingallery/b.JPG",
+    image: "/main gallery/b.JPG",
     description:
       "Sharing love, one meal at a time with the golden hearts of the old age home.",
   },
   {
-    title: "Golden Bonds",
-    image: "/maingallery/c.JPG",
+    title: "Hearts Aligned",
+    image: "/main gallery/c.JPG",
+    description:
+      "  A day of shared smiles between the youngest dreams and the wisest hearts.",
+  },
+  {
+    title: "Golden Bonds ",
+    image: "/main gallery/d.JPG",
     description: "Sharing smiles and stories with the golden generation.",
   },
   {
-    title: "Cyberpunk 2077",
-    image: "/maingallery/12.jpg",
-    description:
-      "Cyberpunk 2077 is an open-world RPG set in Night City, offering immersive storytelling and futuristic action.",
-  },
-  {
     title: "Bright Beginnings",
-    image: "/maingallery/e.JPG",
+    image: "/main gallery/e.JPG",
     description:
       "Igniting young minds with care, curiosity, and joyful connection.",
   },
   {
     title: "Joy in Every Smile",
-    image: "/maingallery/f.JPG",
+    image: "/main gallery/f.JPG",
     description:
       "A day filled with laughter, play, and pure happiness with the little stars.",
   },
   {
     title: "Steps of Joy",
-    image: "/maingallery/g.JPG",
+    image: "/main gallery/g.JPG",
     description:
       "Dancing beyond limits, spreading joy and confidence with every move.",
   },
   {
     title: "Learning Lights",
-    image: "/maingallery/h.JPG",
+    image: "/main gallery/h.JPG",
     description:
       "Empowering young minds through knowledge, one lesson at a time.",
   },
   {
     title: "Cool Kindness",
-    image: "/maingallery/i.JPG",
+    image: "/main gallery/i.JPG",
     description:
       "Cooling hearts and hands—serving buttermilk with care and compassion.",
   },
   {
     title: "Pride in Every Heart",
-    image: "/maingallery/j.JPG",
+    image: "/main gallery/j.JPG",
     description:
       "Celebrating the spirit of the nation with young patriots and bright smiles.",
   },
   {
     title: "Cool for a Cause",
-    image: "/maingallery/k.JPG",
+    image: "/main gallery/k.JPG",
     description:
       "Quenching thirst with kindness — a refreshing gesture on a warm day.",
   },
   {
     title: "Sip of Care",
-    image: "/maingallery/l.JPG",
+    image: "/main gallery/l.JPG",
     description:
       "Serving smiles in every glass — spreading cool comfort on a sunny day.",
   },
   {
     title: "Beat the Heat Drive",
-    image: "/maingallery/m.JPG",
+    image: "/main gallery/m.JPG",
     description:
       "Bringing cool relief to warm days — serving hydration with heart.",
   },
   {
     title: "Hope in Every Corner",
-    image: "/maingallery/n.JPG",
+    image: "/main gallery/n.JPG",
     description:
       "Spreading warmth, listening hearts, and building bonds in the heart of the community.",
   },
   {
-    title: "Apex Legends",
-    image: "/maingallery/o.JPG",
+    title: "Refresh & Reach",
+    image: "/main gallery/o.JPG",
     description:
-      "Apex Legends is a free-to-play battle royale game featuring unique characters and fast-paced squad-based gameplay.",
+      "Spreading smiles and energy—sharing refreshments with love and care.",
   },
   {
-    title: "Genshin Impact",
-    image: "/maingallery/p.jpg",
+    title: "Hands of Hope",
+    image: "/main gallery/p.jpg",
     description:
-      "Genshin Impact is an open-world action RPG with beautiful visuals and elemental combat, set in the world of Teyvat.",
+      "Extending compassion where it’s needed most—standing by those who need us.",
   },
   {
-    title: "Valorant",
-    image: "/maingallery/q.JPG",
+    title: "Tech for Tomorrow",
+    image: "/main gallery/q.JPG",
     description:
-      "Valorant is a tactical first-person shooter from Riot Games, combining precise gunplay with unique agent abilities.",
+      "Empowering young minds with tools for a brighter, smarter future.",
   },
   {
-    title: "God of War",
-    image: "/maingallery/r.JPG",
+    title: "Quenching Thirst",
+    image: "/main gallery/r.JPG",
     description:
-      "God of War follows Kratos and his son Atreus on a mythological journey through Norse realms.",
+      "A small sip, a big relief — serving cool comfort with care and compassion.",
   },
   {
-    title: "Sekiro: Shadows Die Twice",
-    image: "/maingallery/s.JPG",
+    title: "Refreshment Drive",
+    image: "/main gallery/s.JPG",
     description:
-      "Sekiro is an action-adventure game by FromSoftware, known for its challenging sword combat and stealth mechanics.",
+      "Serving smiles with every sip and bite — a small act of kindness to lift the day.",
   },
   {
-    title: "Super Mario Odyssey",
-    image: "/maingallery/t.JPG",
+    title: "Health in Hand",
+    image: "/main gallery/t.JPG",
     description:
-      "Super Mario Odyssey is a 3D platformer where Mario travels across various worlds to save Princess Peach.",
+      "Distributing essential medical kits — a step towards safer, healthier lives.",
   },
   {
-    title: "Hollow Knight",
-    image: "/maingallery/u.JPG",
+    title: "Gratitude Moments",
+    image: "/main gallery/u.JPG",
     description:
-      "Hollow Knight is a challenging 2D action-adventure set in a vast, ruined kingdom of insects and heroes.",
+      "Honored with heartfelt appreciation — a reminder that every small act creates lasting impact.",
   },
   {
-    title: "Celeste",
-    image: "/maingallery/v.JPG",
+    title: "Bonds Beyond Books",
+    image: "/main gallery/v.JPG",
     description:
-      "Celeste is a platformer about climbing a mountain, overcoming tough obstacles, and facing inner struggles.",
+      "Laughs, learning, and love — creating joyful moments with curious young minds.",
   },
   {
-    title: "The Legend of Zelda: Breath of the Wild",
-    image: "/maingallery/w.JPG",
+    title: "Support in Service",
+    image: "/main gallery/w.JPG",
     description:
-      "Breath of the Wild is an open-world adventure where you explore, solve puzzles, and battle to save Hyrule.",
+      "Standing beside our traffic heroes — lending a hand to those who keep our roads safe.",
   },
   {
-    title: "Stardew Valley",
-    image: "/maingallery/x.JPG",
+    title: "Helping Our Helpers",
+    image: "/main gallery/x.JPG",
     description:
-      "Stardew Valley is a relaxing farming simulation game where you grow crops, raise animals, and build relationships.",
+      "A gesture of gratitude for those who protect and serve us daily — because care goes both ways.",
   },
   {
-    title: "Hades",
-    image: "/maingallery/y.JPG",
+    title: "Hygiene for Her",
+    image: "/main gallery/y.JPG",
     description:
-      "Hades is a rogue-like dungeon crawler where you battle out of the Underworld as the immortal Prince Zagreus.",
+      "Empowering women with access to hygiene and self-care essentials.",
   },
   {
-    title: "Animal Crossing: New Horizons",
-    image: "/maingallery/z.JPG",
+    title: "Threads of Kindness",
+    image: "/main gallery/z.JPG",
     description:
-      "Animal Crossing: New Horizons lets you build your dream island life, make friends, and decorate to your heart's content.",
+      "From our hearts to their hands — a gesture of warmth and dignity.",
+  },
+  {
+    title: "Joyful Gatherings",
+    image: "/main gallery/a1.JPG",
+    description:
+      "Bringing communities together — sharing laughter, stories, and support.",
+  },
+  {
+    title: "Seeds of Hope",
+    image: "/main gallery/a2.JPG",
+    description:
+      "Planting the promise of a greener tomorrow, one sapling at a time.",
   },
 ];
 
