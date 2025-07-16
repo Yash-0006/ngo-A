@@ -1,6 +1,8 @@
 "use client";
 import "./maplocation.css";
 import { useEffect, useRef } from "react";
+import { cn } from "@/lib/utils";
+import React from "react";
 
 const EVENTS = [
   {
@@ -579,12 +581,60 @@ const MapLocation = () => {
     };
   }, []);
 
+  // Integrate the grid background and radial fade, and overlay the map on top
   return (
-    <div
-      ref={mapRef}
-      id="leaflet-map"
-      className="overflow-hidden mx-auto rounded-md"
-    />
+    <div className="relative flex items-center justify-center h-[50rem] w-full bg-white dark:bg-black xs:h-[20rem] sm:h-[30rem]">
+      <div
+        className={cn(
+          "absolute inset-0",
+          "[background-size:50px_50px]",
+          "[background-image:linear-gradient(to_right,#bdbdbd_1.5px,transparent_1.5px),linear-gradient(to_bottom,#bdbdbd_1.5px,transparent_1.5px)]",
+          "dark:[background-image:linear-gradient(to_right,#444_1.5px,transparent_1.5px),linear-gradient(to_bottom,#444_1.5px,transparent_1.5px)]"
+        )}
+        style={{
+          opacity: 0.4,
+          zIndex: 1,
+        }}
+      />
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="absolute inset-0 flex items-center justify-center bg-white pointer-events-none [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+      {/* The actual map overlays on top of the grid background */}
+      <div className="z-10 relative flex items-center justify-center w-full h-full">
+        <div
+          ref={mapRef}
+          id="leaflet-map"
+          className="overflow-hidden mx-auto w-full h-[90%] max-w-none max-h-[90%] rounded-md shadow-xl"
+        />
+      </div>
+      <style jsx global>{`
+        @media (max-width: 640px) {
+          /* xs: h-[20rem] */
+          #leaflet-map {
+            height: 90% !important;
+            min-height: 12rem !important;
+            max-height: 40rem !important;
+            position: absolute;
+            top: 5rem;
+          }
+        }
+        @media (min-width: 641px) and (max-width: 1024px) {
+          /* sm: h-[30rem] */
+          #leaflet-map {
+            height: 90% !important;
+            min-height: 18rem !important;
+            max-height: 27rem !important;
+          }
+        }
+        @media (min-width: 1025px) {
+          /* desktop: h-[30rem] */
+          #leaflet-map {
+            height: 90% !important;
+            min-height: 40rem !important;
+            max-height: 45rem !important;
+          }
+        }
+      `}</style>
+    </div>
   );
 };
 
