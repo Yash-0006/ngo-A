@@ -151,7 +151,7 @@ export default function AboutUsContent() {
         viewport={{ once: true, amount: 0.5 }}
         variants={fadeIn}
       >
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#fb64b6] text-center mb-10 mt-40">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#fb64b6] text-center mb-10 mt-41">
           What We Do
         </h2>
         <div className="max-w-4xl mx-auto space-y-10">
