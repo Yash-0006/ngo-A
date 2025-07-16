@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { EffectCoverflow } from "swiper/modules";
+import BackgroundLines from "@/components/utils/background/background-lines"; // Adjust path as needed
 
 const games = [
   {
@@ -20,76 +21,75 @@ const games = [
       "Sharing love, one meal at a time with the golden hearts of the old age home.",
   },
   {
-    title: "Hollow Knight",
+    title: "Golden Bonds",
     image: "/maingallery/c.JPG",
-    description:
-      "Hollow Knight is a critically acclaimed metroidvania game with hand-drawn art and deep exploration.",
+    description: "Sharing smiles and stories with the golden generation.",
   },
   {
     title: "Cyberpunk 2077",
-    image: "/maingallery/d.JPG",
+    image: "/maingallery/12.jpg",
     description:
       "Cyberpunk 2077 is an open-world RPG set in Night City, offering immersive storytelling and futuristic action.",
   },
   {
-    title: "Celeste",
+    title: "Bright Beginnings",
     image: "/maingallery/e.JPG",
     description:
-      "Celeste is a platformer about climbing a mountain, featuring tight controls and a heartfelt story.",
+      "Igniting young minds with care, curiosity, and joyful connection.",
   },
   {
-    title: "The Witcher 3",
+    title: "Joy in Every Smile",
     image: "/maingallery/f.JPG",
     description:
-      "The Witcher 3 is a story-driven RPG where you explore a rich open world as Geralt of Rivia.",
+      "A day filled with laughter, play, and pure happiness with the little stars.",
   },
   {
-    title: "RDR 2",
+    title: "Steps of Joy",
     image: "/maingallery/g.JPG",
     description:
-      "RDR 2 is an action-adventure game developed and published by Rockstar Games, set in a fictionalized Western US.",
+      "Dancing beyond limits, spreading joy and confidence with every move.",
   },
   {
-    title: "PUBG Mobile",
+    title: "Learning Lights",
     image: "/maingallery/h.JPG",
     description:
-      "PUBG Mobile is a battle royale shooter that pits 100 players against each other in a struggle for survival.",
+      "Empowering young minds through knowledge, one lesson at a time.",
   },
   {
-    title: "Fortnite",
+    title: "Cool Kindness",
     image: "/maingallery/i.JPG",
     description:
-      "Battle royale where 100 players fight to be the last person standing. Fast building mechanics & colorful design.",
+      "Cooling hearts and hands—serving buttermilk with care and compassion.",
   },
   {
-    title: "Far Cry 5",
+    title: "Pride in Every Heart",
     image: "/maingallery/j.JPG",
     description:
-      "Far Cry 5 is a 2018 first-person shooter game developed by Ubisoft, set in an open world environment.",
+      "Celebrating the spirit of the nation with young patriots and bright smiles.",
   },
   {
-    title: "Assassin's Creed Valhalla",
+    title: "Cool for a Cause",
     image: "/maingallery/k.JPG",
     description:
-      "Assassin's Creed Valhalla lets you become a legendary Viking on a quest for glory in England's Dark Ages.",
+      "Quenching thirst with kindness — a refreshing gesture on a warm day.",
   },
   {
-    title: "Overwatch",
+    title: "Sip of Care",
     image: "/maingallery/l.JPG",
     description:
-      "Overwatch is a vibrant team-based shooter set on a near-future earth, with unique heroes and abilities.",
+      "Serving smiles in every glass — spreading cool comfort on a sunny day.",
   },
   {
-    title: "Minecraft",
+    title: "Beat the Heat Drive",
     image: "/maingallery/m.JPG",
     description:
-      "Minecraft is a sandbox game where you can build, explore, and survive in a blocky, procedurally-generated world.",
+      "Bringing cool relief to warm days — serving hydration with heart.",
   },
   {
-    title: "League of Legends",
+    title: "Hope in Every Corner",
     image: "/maingallery/n.JPG",
     description:
-      "League of Legends is a fast-paced, competitive online game blending the speed and intensity of an RTS with RPG elements.",
+      "Spreading warmth, listening hearts, and building bonds in the heart of the community.",
   },
   {
     title: "Apex Legends",
@@ -205,7 +205,14 @@ export default function GameCarousel() {
   }, []);
 
   return (
-    <section className="game-section centered-section">
+    <section
+      className="game-section centered-section"
+      style={{ position: "relative", overflow: "hidden" }}
+    >
+      {/* Responsive background lines */}
+      <div className="background-lines-wrapper">
+        <BackgroundLines />
+      </div>
       <h2
         className="line-title animated-title pink-text"
         style={{
@@ -283,6 +290,15 @@ export default function GameCarousel() {
         }
         body {
           font-family: "Roboto", sans-serif;
+        }
+        .background-lines-wrapper {
+          position: absolute;
+          inset: 0;
+          width: 100vw;
+          height: 100vh;
+          z-index: 0;
+          pointer-events: none;
+          overflow: hidden;
         }
         .centered-section {
           min-height: 100vh;
@@ -523,6 +539,10 @@ export default function GameCarousel() {
           transform: scale(1) !important;
         }
         @media (max-width: 767px) {
+          .background-lines-wrapper {
+            width: 100vw;
+            height: 100vh;
+          }
           .centered-section {
             padding: 0 2vw;
             min-height: 100vh;
@@ -598,6 +618,10 @@ export default function GameCarousel() {
           }
         }
         @media (min-width: 768px) {
+          .background-lines-wrapper {
+            width: 100vw;
+            height: 100vh;
+          }
           .game-swiper {
             padding-bottom: 20px !important;
           }

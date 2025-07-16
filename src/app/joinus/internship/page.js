@@ -4,6 +4,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Counter from "@/components/Counter";
 
+// Fix for Next.js Image component props (no layout/objectFit in app dir, use fill and style instead)
+// Also, ensure all imported components are valid React components (not objects)
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
@@ -13,24 +16,28 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
-const Stat = ({ to, suffix, label }) => (
-  <div className="text-center">
-    <Counter to={to} suffix={suffix} />
-    <p className="font-serif text-xs text-neutral-400 tracking-widest mt-2 uppercase">
-      {label}
-    </p>
-  </div>
-);
-
-const FeaturePoint = ({ number, title, children }) => (
-  <motion.div variants={itemVariants} className="relative pl-14">
-    <div className="absolute left-0 top-1 flex h-10 w-10 items-center justify-center rounded-full bg-pink-900/50 border border-pink-700/60 text-pink-400 font-semibold">
-      {number}
+function Stat({ to, suffix, label }) {
+  return (
+    <div className="text-center">
+      <Counter to={to} suffix={suffix} />
+      <p className="font-serif text-xs text-neutral-400 tracking-widest mt-2 uppercase">
+        {label}
+      </p>
     </div>
-    <h3 className="font-semibold text-lg text-white mb-2 pt-1">{title}</h3>
-    <p className="text-neutral-400 leading-relaxed">{children}</p>
-  </motion.div>
-);
+  );
+}
+
+function FeaturePoint({ number, title, children }) {
+  return (
+    <motion.div variants={itemVariants} className="relative pl-14">
+      <div className="absolute left-0 top-1 flex h-10 w-10 items-center justify-center rounded-full bg-pink-900/50 border border-pink-700/60 text-pink-400 font-semibold">
+        {number}
+      </div>
+      <h3 className="font-semibold text-lg text-white mb-2 pt-1">{title}</h3>
+      <p className="text-neutral-400 leading-relaxed">{children}</p>
+    </motion.div>
+  );
+}
 
 export default function InternshipPage() {
   const opportunities = [
@@ -151,8 +158,8 @@ export default function InternshipPage() {
                   <Image
                     src="/images/intern2.jpg"
                     alt="A group of interns working together"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: "cover" }}
                   />
                 </motion.div>
                 <motion.div
@@ -177,8 +184,8 @@ export default function InternshipPage() {
           </div>
         </div>
 
-        <br></br>
-        <br></br>
+        <br />
+        <br />
 
         <div
           id="programs"

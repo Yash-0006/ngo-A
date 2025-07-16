@@ -11,44 +11,46 @@ import {
 const timelineData = [
   {
     year: "2022",
-    title: "Discovered Anime",
+    title: "The Beginning of Avasa",
     images: [
       "https://w0.peakpx.com/wallpaper/571/269/HD-wallpaper-a-silent-voice-anime-goals-koe-no-katachi-love-random.jpg",
       "https://w0.peakpx.com/wallpaper/513/42/HD-wallpaper-tenki-no-ko-anime-art-random-sky-waifu.jpg",
       "https://w0.peakpx.com/wallpaper/894/73/HD-wallpaper-tenki-no-ko-anime-art-goals-random-waifu.jpg",
     ],
     content:
-      "Started watching anime and fell in love with the art and stories. I remember the first time I watched 'A Silent Voice'—the emotional depth and beautiful animation left a lasting impression on me. I began exploring different genres, from slice-of-life to action-packed shonen, and found myself eagerly anticipating each new episode. Anime quickly became more than just entertainment; ",
+      "Avasa was founded by Radha Priyanka in Hyderabad with a vision to support the underprivileged. The year saw heartfelt initiatives like clothes donation drives, online awareness sessions on self-confidence, interactions with orphanages, and food distribution for the needy — laying the foundation for a mission rooted in compassion.",
   },
   {
     year: "2023",
-    title: "Joined Anime Club",
+    title: " A New Chapter in Jaipur",
     images: [
       "https://w0.peakpx.com/wallpaper/894/73/HD-wallpaper-tenki-no-ko-anime-art-goals-random-waifu.jpg",
       "https://w0.peakpx.com/wallpaper/733/129/HD-wallpaper-kimetsu-no-yaiba-anime-art-demon-slayer-fantasy-random.jpg",
     ],
     content:
-      "Became a member of the local anime club and made new friends. Attending weekly meetups, I participated in group watch parties, lively discussions, and even trivia nights. The club organized themed events, such as cosplay contests and manga drawing workshops, which allowed me to express my creativity and learn new skills. Through these activities, I formed close bonds with people who shared my enthusiasm for anime and Japanese culture. We often collaborated on fan projects, exchanged merchandise, and supported each other at conventions. The sense of belonging and camaraderie I found in the club made this year truly special.",
+      "In 2023, Avasa was reborn in Jaipur with renewed energy. Radha, joined by her university friends and volunteers, expanded outreach through meaningful interactions with Naya Sawera Orphanage and Sarthak Old Age Home.The team conducted dance classes and bonding sessions with children at Matra Chaya Bal Gruh and connected deeply with residents of a nearby village, Chak, understanding their everyday struggles.Efforts included distributing food and warm clothes to those in need, and engaging with students at the government school in Chak, bringing care, creativity, and community to life through every initiative.",
   },
   {
     year: "2024",
-    title: "Cosplayed at Convention",
+    title: "A Year of Recognition & Formal Milestone",
     images: [
       "https://w0.peakpx.com/wallpaper/514/165/HD-wallpaper-a-silent-voice-anime-girl-goals-koe-no-katachi-love-random-waifu.jpg",
       "https://w0.peakpx.com/wallpaper/891/288/HD-wallpaper-silent-voice-anime-art-koe-no-katachi-love-random.jpg",
     ],
     content:
-      "Attended my first anime convention and cosplayed as my favorite character. The experience was exhilarating—I spent weeks preparing my costume, learning makeup techniques, and perfecting every detail. Walking through the convention halls, I was amazed by the creativity and dedication of fellow cosplayers. I participated in photoshoots, joined panel discussions, and met some of my favorite voice actors. The event also featured exclusive screenings, artist alleys, and merchandise booths, making it a paradise for any anime fan. Sharing this adventure with friends from the anime club made it even more memorable, and I left with unforgettable memories and new connections.",
+      "In 2024, Avasa Foundation was officially registered under the Telangana Societies Registration Act (Reg. No. 1108 of 2024), marking a major step in our organizational journey.We celebrated New Year’s with both an orphanage and an old age home, and were honored to be invited by the Chak Government School for their Republic Day and Annual Day celebrations, where we distributed stationery kits and continued regular student engagement.Our ongoing association with Sarthak Old Age Home strengthened, while our Beat the Heat drive distributed 1,000 buttermilk packets across underserved areas.Other initiatives included food donation with Naya Sawera NGO, period kits for women in Chak village, and medical kit distribution in Vaishali Nagar slums — reinforcing our commitment to community wellness and dignity.",
   },
   {
     year: "2025",
-    title: "Started Drawing Anime",
+    title: "Innovation, Expansion & Continued Commitment",
     images: [
       "https://w0.peakpx.com/wallpaper/41/192/HD-wallpaper-silent-voice-anime-koe-no-kstschi-love-random.jpg",
       "https://w0.peakpx.com/wallpaper/1009/985/HD-wallpaper-chuunibyou-anime-art-beatiful-girl-random-waifu.jpg",
     ],
     content:
-      "Began drawing my own anime characters and sharing them online. Inspired by the incredible artists I followed, I dedicated time each day to practice sketching, inking, and digital coloring. I posted my artwork on social media and received encouraging feedback from the community, which motivated me to improve further. I also joined online art challenges and collaborated with other creators on fan comics and illustrations. Over time, I developed my unique style and even started taking commissions. This creative journey not only enhanced my artistic skills but also boosted my confidence and opened up new opportunities in the world of anime art.",
+      "In 2025, Avasa Foundation continued its mission with renewed energy and innovation.We were honored once again to join the Republic Day celebrations at Chak Government School, where we strengthened our commitment to education by providing a projector, offering much-needed technical support to enhance classroom learning.Building on the success of the previous year, our summer Beat the Heat drive returned with greater scale — distributing over 1,500 buttermilk packets to individuals battling the harsh summer heat across underserved areas.With every initiative, Avasa continues to evolve — combining compassion, community, and sustainable support to uplift lives across generations.
+
+",
   },
 ];
 

@@ -23,6 +23,7 @@ function getEventPopupHtml(event) {
   const addressId = `event-address-${event.id}`;
   const buttonId = `copy-event-address-btn-${event.id}`;
   return `
+  
     <b>${event.name}</b><br/>
     Date: ${event.date}<br/>
     <span id="${addressId}">${event.address}</span>

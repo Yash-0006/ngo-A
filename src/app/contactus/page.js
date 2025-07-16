@@ -1,5 +1,6 @@
 import React from "react";
 import ContactUsSection from "@/components/section/contactussection/ContactUsSection";
+// import Image from "next/image"; // Remove next/image for external images
 
 const ContactUsPage = () => {
   return (
@@ -11,10 +12,13 @@ const ContactUsPage = () => {
 
         <div className="landing_page">
           <div className="responsive-container-block big-container relative">
+            {/* Use a regular img tag for external background image to avoid next/image config error */}
             <img
               className="bg-img absolute w-full h-full object-cover z-0"
               src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/clothes-bg.png"
               alt="Background"
+              style={{ objectFit: "cover", zIndex: 0 }}
+              loading="eager"
             />
 
             <div className="responsive-container-block container relative z-10 flex flex-wrap">
@@ -34,6 +38,9 @@ const ContactUsPage = () => {
                         className="img w-6 h-6"
                         src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png"
                         alt="Twitter"
+                        width={24}
+                        height={24}
+                        loading="lazy"
                       />
                     </a>
                     <a className="share-icon" href="#">
@@ -41,6 +48,9 @@ const ContactUsPage = () => {
                         className="img w-6 h-6"
                         src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-facebook.png"
                         alt="Facebook"
+                        width={24}
+                        height={24}
+                        loading="lazy"
                       />
                     </a>
                     <a className="share-icon" href="#">
@@ -48,6 +58,9 @@ const ContactUsPage = () => {
                         className="img w-6 h-6"
                         src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-google.png"
                         alt="Google"
+                        width={24}
+                        height={24}
+                        loading="lazy"
                       />
                     </a>
                     <a className="share-icon" href="#">
@@ -55,6 +68,9 @@ const ContactUsPage = () => {
                         className="img w-6 h-6"
                         src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-instagram.png"
                         alt="Instagram"
+                        width={24}
+                        height={24}
+                        loading="lazy"
                       />
                     </a>
                   </div>

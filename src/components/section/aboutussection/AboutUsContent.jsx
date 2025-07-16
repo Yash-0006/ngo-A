@@ -18,94 +18,130 @@ const fadeIn = {
 export default function AboutUsContent() {
   const team = [
     {
-      name: "Vinathi",
-      role: "Account Manager",
-      desc: "Cheerful and enthusiastic, she handles financial expenses with positivity.",
+      name: "V. Radha Priyanka",
+      role: "Founder/ President",
+      desc: "Visionary and compassionate, she leads Avasa with purpose, heart, and unwavering commitment to its mission.",
       img: "/team/vinathi.jpg",
     },
     {
-      name: "Radha Priyanka",
-      role: "Founder",
-      desc: "Visionary and compassionate, she leads Avasa with purpose and heart.",
+      name: "V. Keerthi Sri",
+      role: "Vice President",
+      desc: "Provides strategic oversight, ensuring organizational alignment, operational excellence, and effective implementation of programs.",
+      img: "/team/vinathi.jpg",
+    },
+    {
+      name: "Ananya Pandey",
+      role: "General Secretary",
+      desc: "Manages administrative affairs, ensures clear communication, and upholds governance with integrity.",
       img: "/team/priyanka.jpg",
     },
     {
-      name: "Ajay",
-      role: "Outreach Lead",
-      desc: "Manages drives and events with energy and dedication.",
+      name: "M.V. Nageswara Rao",
+      role: "Joint Secretary",
+      desc: "Supports administrative functions and streamlines coordination to ensure operational efficiency.",
       img: "/team/ajay.jpg",
     },
     {
-      name: "Radha Priyanka",
-      role: "Founder",
-      desc: "Visionary and compassionate, she leads Avasa with purpose and heart.",
+      name: "V. Lakshmi Prasanna",
+      role: "Treasurer",
+      desc: "Manages financial operations, maintains transparent records, and ensures accountable use of funds.",
       img: "/team/priyanka.jpg",
     },
     {
-      name: "Ajay",
-      role: "Outreach Lead",
-      desc: "Manages drives and events with energy and dedication.",
+      name: "K. Usha Bhargavi",
+      role: "Executive member",
+      desc: "Contributes to decision-making, supports program execution, and upholds the organization’s mission through active involvement.",
+      img: "/team/ajay.jpg",
+    },
+    {
+      name: "V. Sai Harini",
+      role: "Executive member",
+      desc: "Contributes in organizational activities, offering insights and assistance to drive impactful initiatives forward.",
+      img: "/team/ajay.jpg",
+    },
+    {
+      name: "Ch. Vinathi",
+      role: "Head of Finance",
+      desc: "Oversees financial planning, budgeting, and compliance to ensure fiscal responsibility and sustainability.",
+      img: "/team/ajay.jpg",
+    },
+    {
+      name: "R.V.R. Vamsi",
+      role: "Head of Social Media",
+      desc: "Leads the organization’s digital presence by strategizing, creating, and managing content to amplify outreach and engagement.",
       img: "/team/ajay.jpg",
     },
   ];
 
   return (
-    <div className="w-full h-full overflow-hidden bg-black text-white px-4 py-10 sm:px-6 md:px-10 lg:px-16 space-y-20 sm:space-y-24 md:space-y-28 pb-180 sm:pb-32">
-      {/* About Us Title */}
+    <div
+      className="px-4 py-12 mt-10 text-white bg-black space-y-20 sm:px-6 md:px-10 lg:px-16"
+      style={minHeight ? { minHeight } : undefined}
+    >
+      {/* Section: Hero Banner Full Screen */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="flex items-center justify-center"
+        className="overflow-hidden relative flex items-center justify-center mt-10"
       >
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white text-center drop-shadow-lg mt-20">
-          About Us
-        </h1>
+        {/* Centered Heading */}
+        <div className="z-10 text-center">
+          <h1 className="text-5xl font-extrabold text-white drop-shadow-lg sm:text-6xl">
+            About Us
+          </h1>
+        </div>
       </motion.div>
 
-      {/* Who We Are */}
-{/* Who We Are */}
-<motion.section
-  id="who-we-are"
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true, amount: 0.5 }}
-  variants={fadeIn}
->
-  <div className="flex flex-col-reverse md:flex-row items-center justify-between bg-[#fb64b6]/10 rounded-xl shadow-md overflow-hidden">
-    {/* Text */}
-    <div className="w-full md:w-1/2 p-6 sm:p-8 lg:p-10 space-y-4">
-      <h2 className="text-3xl sm:text-4xl font-bold text-[#fb64b6] text-center md:text-left">
-        Who We Are
-      </h2>
-      <p className="text-lg leading-relaxed text-center md:text-left">
-        What began as a heartfelt initiative by{" "}
-        <strong className="text-[#fb64b6]">V. Radha Priyanka</strong> and her close friends in 2022 has now grown
-        into a registered movement of compassion and change.
-        Rooted in Hyderabad, our journey started with simple acts—distributing clothes and food to those in need.
-        <br /><br />
-        As our vision expanded, so did our reach. We built a dedicated team and extended to Jaipur—
-        taking our mission of care to more communities.
-        <br /><br />
-        In November 2024, we officially registered as an NGO, allowing us to amplify our impact and reach.
-      </p>
-    </div>
-    
-    {/* ✅ Updated Image Wrapper */}
-    <div className="w-full md:w-1/2 flex justify-center items-center p-6 sm:p-8">
-      <div className="max-w-[400px] md:max-w-[600px] w-full">
-        <Image
-          className="w-full h-auto object-cover rounded-2xl border border-[#fb64b6]"
-          width={400}
-          height={300}
-          alt="About us"
-          src="/images/aboutus1.jpg"
-        />
-      </div>
-    </div>
-  </div>
-</motion.section>
+      {/* Section: Who We Are */}
+      <motion.section
+        id="who-we-are"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+      >
+        <div className="flex justify-around items-center bg-[#fb64b6]/10 rounded-xl shadow-md hover:shadow-lg transition">
+          <div className="flex-1/2">
+            <h2 className="mb-6 text-3xl font-bold text-[#fb64b6] text-center sm:text-4xl">
+              Who We Are
+            </h2>
+            <p className="mx-auto px-2 text-center leading-relaxed text-white text-lg sm:px-14">
+              What began as a heartfelt initiative by{" "}
+              <strong className="text-[#fb64b6]">V. Radha Priyanka</strong> and
+              her close friends in 2022 has now grown into a registered movement
+              of compassion and change. Rooted in Hyderabad, our journey started
+              with simple acts—distributing clothes and food to those in need.
+              <br />
+              <br />
+              As our vision expanded, so did our reach. We built a dedicated
+              team and extended to Jaipur—taking our mission of care to more
+              communities. From refreshment drives and medical kit distributions
+              to visits to orphanages and old age homes, every effort is driven
+              by the same purpose—to bring hope, dignity, and support.
+              <br />
+              <br />
+              Founded in 2022 and officially incorporated as a{" "}
+              <strong className="text-[#fb64b6]">
+                registered NGO in November 2024
+              </strong>
+              , Avasa is registered under the Telangana Societies Registration
+              Act, 2001 with registration number{" "}
+              <strong className="text-[#fb64b6]">1108 of 2024</strong>. This
+              recognition enables us to scale our initiatives and deepen our
+              commitment to meaningful, community-driven change.
+            </p>
+          </div>
+          <Image
+            className="m-10 rounded-2xl"
+            width={550}
+            height={300}
+            alt="image"
+            src="/images/aboutus1.jpg"
+          />
+        </div>
+      </motion.section>
 
       {/* What We Do */}
       <motion.section
@@ -167,26 +203,36 @@ export default function AboutUsContent() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
         variants={fadeIn}
+        className="relative min-h-[380vh] sm:min-h-[200vh] md:min-h-[130vh] lg:min-h-[140vh]"
       >
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#fb64b6] text-center mb-10">
-          Meet Our Team
-        </h2>
-        <div className="flex flex-wrap sm:mx-30 justify-center gap-6">
-          {team.map((member, index) => (
-            <div
-              key={index}
-              className="bg-[#fb64b6]/10 p-5 rounded-xl w-full sm:w-[260px] md:w-[280px] lg:w-[300px] text-center shadow-md transition-transform duration-300 hover:scale-105"
-            >
-              <img
-                src={member.img}
-                alt={member.name}
-                className="mx-auto mb-4 w-24 h-24 sm:h-28 sm:w-28 rounded-full object-cover border-4 border-[#fb64b6]"
-              />
-              <h3 className="text-lg font-semibold text-[#fb64b6] sm:text-xl">{member.name}</h3>
-              <p className="text-sm text-white">{member.role}</p>
-              <p className="text-xs sm:text-sm mt-2 text-white">{member.desc}</p>
-            </div>
-          ))}
+        <div className="mt-16 mx-20 sm:mt-20 md:mt-24 lg:mt-32">
+          <h2 className="text-3xl font-bold text-[#fb64b6] text-center sm:text-4xl">
+            Meet Our Board
+          </h2>
+
+          <div className="flex flex-wrap justify-center gap-6 mt-8 px-2 mt-10 px-0 sm:gap-8">
+            {team.map((member, index) => (
+              <div
+                key={index}
+                className="p-5 w-[85vw] w-[280px] text-center bg-[#fb64b6]/10 rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg sm:p-6 md:w-[300px] lg:w-[320px]"
+              >
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="object-cover mx-auto mb-4 w-24 h-24 w-28 rounded-full border-4 border-[#fb64b6] sm:h-28"
+                />
+                <h3 className="text-lg font-semibold text-[#fb64b6] sm:text-xl">
+                  {member.name}
+                </h3>
+                <p className="mt-1 text-sm text-white sm:text-base">
+                  {member.role}
+                </p>
+                <p className="mt-2 text-xs text-white sm:text-sm">
+                  {member.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </motion.section>
     </div>

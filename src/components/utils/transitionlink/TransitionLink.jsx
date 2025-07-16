@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
-import React, { useCallback } from "react";
+import React, { useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { useLenis } from "@studio-freight/react-lenis";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // Utility to escape double and single quotes for HTML attributes/text
 function escapeHtml(str) {
@@ -144,9 +144,11 @@ function getRewrittenHref(href) {
   return href;
 }
 
+// The main fix: Only set the client-side href after mount, so SSR and client always match
 export const TransitionLink = ({ children, href, ...props }) => {
   const router = useRouter();
   const lenis = useLenis();
+  const [clientHref, setClientHref] = useState(null);
 
   // Ensure the style is only injected on the client
   useEffect(() => {
@@ -165,6 +167,12 @@ export const TransitionLink = ({ children, href, ...props }) => {
     rewrittenHref = props["data-aboutus-anchor"];
   }
 
+  // On mount, set the clientHref to the rewrittenHref
+  useEffect(() => {
+    setClientHref(rewrittenHref);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rewrittenHref]);
+
   // Escape children if it's a string to avoid unescaped quotes
   let safeChildren = children;
   if (typeof children === "string") {
@@ -181,6 +189,8 @@ export const TransitionLink = ({ children, href, ...props }) => {
 
   const handleTransition = useCallback(
     async (e) => {
+      // Use the latest clientHref for navigation
+      const navHref = clientHref ?? rewrittenHref;
       if (
         e.defaultPrevented ||
         e.button !== 0 ||
@@ -188,9 +198,8 @@ export const TransitionLink = ({ children, href, ...props }) => {
         e.altKey ||
         e.ctrlKey ||
         e.shiftKey ||
-        (typeof rewrittenHref === "string" &&
-          (rewrittenHref.startsWith("http") ||
-            rewrittenHref.startsWith("mailto:")))
+        (typeof navHref === "string" &&
+          (navHref.startsWith("http") || navHref.startsWith("mailto:")))
       ) {
         return;
       }
@@ -209,15 +218,19 @@ export const TransitionLink = ({ children, href, ...props }) => {
 
       await sleep(650);
 
-      router.push(rewrittenHref);
+      router.push(navHref);
 
       setTimeout(removeSlideUpOverlay, 500);
     },
-    [router, rewrittenHref, lenis]
+    [router, clientHref, rewrittenHref, lenis]
   );
 
+  // During SSR, always use the original href to avoid hydration mismatch
+  // After mount, use the rewritten clientHref
+  const linkHref = clientHref === null ? href : clientHref;
+
   return (
-    <Link {...safeProps} href={rewrittenHref} onClick={handleTransition}>
+    <Link {...safeProps} href={linkHref} onClick={handleTransition}>
       {safeChildren}
     </Link>
   );

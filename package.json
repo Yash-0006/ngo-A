@@ -19,7 +19,7 @@
     "gsap": "^3.13.0",
     "jquery": "^3.7.1",
     "keen-slider": "^6.8.6",
-    "motion": "^12.23.5",
+    "motion": "^12.23.6",
     "next": "15.3.4",
     "owl.carousel": "^2.3.4",
     "razorpay": "^2.9.6",
